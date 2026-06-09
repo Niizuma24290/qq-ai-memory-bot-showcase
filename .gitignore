@@ -1,0 +1,7 @@
+.env
+*.log
+*.sqlite3
+data/
+backups/
+exports/
+.venv/

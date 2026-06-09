@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QQ AI Memory Bot</title>
+    <meta
+      name="description"
+      content="QQ AI Memory Bot static showcase: self-hosted QQ chat memory, AI summary, semantic Q&A, and operations."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="QQ AI Memory Bot">
+        <span class="brand-mark">Q</span>
+        <span>QQ AI Memory Bot</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#why" data-i18n="navWhy"></a>
+        <a href="#features" data-i18n="navFeatures"></a>
+        <a href="#demo" data-i18n="navDemo"></a>
+        <a href="#how" data-i18n="navHow"></a>
+      </nav>
+      <div class="language-toggle" aria-label="Language switch">
+        <button class="lang-button active" type="button" data-lang="zh">中文</button>
+        <button class="lang-button" type="button" data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <canvas id="memoryCanvas" aria-hidden="true"></canvas>
+        <div class="hero-content reveal">
+          <p class="eyebrow" data-i18n="heroEyebrow"></p>
+          <h1 id="hero-title">QQ AI Memory Bot</h1>
+          <p class="subtitle" data-i18n="heroSubtitle"></p>
+          <p class="hero-copy" data-i18n="heroCopy"></p>
+          <div class="hero-actions">
+            <a class="button primary" href="#features" data-i18n="ctaFeatures"></a>
+            <a class="button" href="#demo" data-i18n="ctaDemo"></a>
+            <a class="button ghost" href="#how" data-i18n="ctaArchitecture"></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section why-section" id="why">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="whyEyebrow"></p>
+          <h2 data-i18n="whyTitle"></h2>
+        </div>
+        <div class="why-grid">
+          <article class="mini-card reveal">
+            <span>01</span>
+            <h3 data-i18n="whyOneTitle"></h3>
+            <p data-i18n="whyOneCopy"></p>
+          </article>
+          <article class="mini-card reveal">
+            <span>02</span>
+            <h3 data-i18n="whyTwoTitle"></h3>
+            <p data-i18n="whyTwoCopy"></p>
+          </article>
+          <article class="mini-card reveal">
+            <span>03</span>
+            <h3 data-i18n="whyThreeTitle"></h3>
+            <p data-i18n="whyThreeCopy"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section band" id="features">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Core Features</p>
+          <h2 data-i18n="featuresTitle"></h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3 data-i18n="featureMemoryTitle"></h3>
+            <p data-i18n="featureMemoryCopy"></p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="featureSummaryTitle"></h3>
+            <p data-i18n="featureSummaryCopy"></p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="featureAskTitle"></h3>
+            <p data-i18n="featureAskCopy"></p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="featureOpsTitle"></h3>
+            <p data-i18n="featureOpsCopy"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="demo">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Command Demo</p>
+          <h2 data-i18n="demoTitle"></h2>
+          <p data-i18n="demoCopy"></p>
+        </div>
+        <div class="demo-switch reveal" role="tablist" aria-label="Command demo switch">
+          <button class="demo-tab active" type="button" data-demo="summary">/summary</button>
+          <button class="demo-tab" type="button" data-demo="ask">/ask</button>
+          <button class="demo-tab" type="button" data-demo="health">/health</button>
+        </div>
+        <div class="qq-demo reveal" aria-live="polite">
+          <div class="phone-bar">
+            <span data-i18n="demoBotName"></span>
+            <i></i>
+          </div>
+          <div class="message-area" id="demoPanel"></div>
+        </div>
+      </section>
+
+      <section class="section band" id="how">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How It Works</p>
+          <h2 data-i18n="howTitle"></h2>
+        </div>
+        <div class="flow reveal" aria-label="Main workflow">
+          <div class="flow-item" data-i18n="flowOne"></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item" data-i18n="flowTwo"></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item" data-i18n="flowThree"></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item" data-i18n="flowFour"></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item" data-i18n="flowFive"></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item" data-i18n="flowSix"></div>
+        </div>
+      </section>
+
+      <section class="section" id="build">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Build & Safety</p>
+          <h2 data-i18n="safetyTitle"></h2>
+        </div>
+        <div class="safety-grid">
+          <article class="mini-card reveal">
+            <h3>VPS + systemd</h3>
+            <p data-i18n="safetyVps"></p>
+          </article>
+          <article class="mini-card reveal">
+            <h3>SQLite</h3>
+            <p data-i18n="safetySqlite"></p>
+          </article>
+          <article class="mini-card reveal">
+            <h3>.env</h3>
+            <p data-i18n="safetyEnv"></p>
+          </article>
+          <article class="mini-card reveal">
+            <h3 data-i18n="safetyBackupTitle"></h3>
+            <p data-i18n="safetyBackup"></p>
+          </article>
+          <article class="mini-card reveal">
+            <h3 data-i18n="safetyAdminTitle"></h3>
+            <p data-i18n="safetyAdmin"></p>
+          </article>
+          <article class="mini-card reveal">
+            <h3>UFW / Fail2Ban</h3>
+            <p data-i18n="safetyFirewall"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section band" id="timeline">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Version Highlights</p>
+          <h2 data-i18n="versionTitle"></h2>
+        </div>
+        <div class="version-list reveal">
+          <article><strong>v1</strong><span data-i18n="versionOne"></span></article>
+          <article><strong>v2</strong><span data-i18n="versionTwo"></span></article>
+          <article><strong>v2.8</strong><span data-i18n="versionThree"></span></article>
+          <article><strong>v3</strong><span data-i18n="versionFour"></span></article>
+          <article><strong>v3.3</strong><span data-i18n="versionFive"></span></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span data-i18n="footerText"></span>
+      <a href="#top" data-i18n="backTop"></a>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
