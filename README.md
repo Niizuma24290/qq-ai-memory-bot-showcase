@@ -1,10 +1,12 @@
 # QQ AI Memory Bot Showcase
 
-This repository contains the public static showcase website for **QQ AI Memory Bot**.
+一个自托管 QQ 聊天记忆助手的项目展示页。
 
-QQ AI Memory Bot is a self-hosted QQ chat memory assistant project. The showcase
-page introduces the product idea, core features, command demos, high-level
-workflow, deployment notes, safety choices, and version highlights.
+[在线查看展示页 / Live Demo](https://niizuma24290.github.io/qq-ai-memory-bot-showcase/)
+
+This repository contains the public static showcase website for **QQ AI Memory
+Bot**. The page introduces the product idea, core features, command demos,
+high-level workflow, deployment notes, safety choices, and version highlights.
 
 ## What This Repository Contains
 
